@@ -1,0 +1,31 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
