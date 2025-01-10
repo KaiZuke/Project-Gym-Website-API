@@ -21,8 +21,8 @@ const App = () => {
                         <Route path="/foods" element={<Foods />} />
                         <Route path="/" element={
                             <div>
-                                <h1>Selamat Datang di Portal Kesehatan!</h1>
-                                <h3>Solusi Sehat Untuk Hidup yang Lebih Baik</h3>
+                                <h1>Selamat Datang di GymBro!</h1>
+                                <h3>Portal Kesehatan Untuk Hidup yang Lebih Baik</h3>
                                 <p>Portal ini memiliki berbagai fungsi dan informasi yang bisa Anda gunakan
                                     untuk memulai hidup yang lebih sehat.
                                 </p>

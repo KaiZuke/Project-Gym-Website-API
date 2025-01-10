@@ -27,54 +27,54 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Change color on hover */
+    color: #4cdfdc; 
 }
 
 main {
-    flex: 1; /* Allow main to grow and fill available space */
-    padding-top: 70px !important; /* Adjust this value based on the height of your header */
-    max-width: 800px; /* Limit the width of the main content */
-    margin: 20px auto; /* Center the main content */
-    background: white; /* White background for the main content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px; /* Padding inside the main content */
+    flex: 1;
+    padding-top: 100px !important;
+    max-width: 800px; 
+    margin: 20px auto; 
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
 }
 
 h1 {
     color: #333;
-    text-align: center; /* Center the main heading */
-    margin-bottom: 20px; /* Space below the heading */
+    text-align: center;
+    margin-bottom: 20px; 
 }
 
 h2 {
-    color: #444; /* Slightly lighter color for subheadings */
-    margin-top: 20px; /* Space above subheadings */
+    color: #444; 
+    margin-top: 20px;
 }
 
 p {
-    color: #666; /* Dark gray for paragraph text */
-    margin-bottom: 15px; /* Space below paragraphs */
+    color: #666; 
+    margin-bottom: 15px; 
 }
 
 ul {
-    padding-left: 20px; /* Indent unordered lists */
+    padding-left: 20px; 
 }
 
 li {
-    margin-bottom: 10px; /* Space below list items */
+    margin-bottom: 10px; 
 }
 
 footer {
     position: fixed;
     bottom: 0 !important;
-    background-color: #333;
+    background-color: #26262e;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    width: 100%; /* Ensure footer takes full width */
+    padding: 3px 0;
+    width: 100%;
 }

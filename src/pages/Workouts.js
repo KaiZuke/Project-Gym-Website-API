@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './loading.css'; 
 
 const Workouts = () => {
   const [exercises, setExercises] = useState([]);
@@ -40,8 +41,8 @@ const Workouts = () => {
     fetchExercises(selectedMuscle, selectedType, selectedDifficulty);
   }, [selectedType, selectedMuscle, selectedDifficulty]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error mengambil data exercises: {error.message}</p>;
+  if (loading) return <div className="loading"></div>; 
+  if (error) return <p>Error searching exercises: {error.message}</p>;
   
   const exerciseTypes = [...new Set(exercises.map(ex => ex.type))];
   const muscleGroups = [...new Set(exercises.map(ex => ex.muscle))];
@@ -78,7 +79,7 @@ const Workouts = () => {
       <h2>Filtered Exercises</h2>
       <ul>
         {filteredExercises.map((exercise, index) => (
-          <li key={index} style={{ marginBottom: '20px', border: '1px solid #ccc', padding: '10px', borderRadius: '5px' }}>
+          <li key={index} style={{ marginBottom: '20px', border: '1px solid #ccc', padding: '10px ', borderRadius: '5px' }}>
             <h3>{exercise.name}</h3>
             <p><strong>Type:</strong> {exercise.type}</p>
             <p><strong>Muscle:</strong> {exercise.muscle}</p>
