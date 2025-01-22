@@ -41,6 +41,11 @@ const Workouts = () => {
     fetchExercises(selectedMuscle, selectedType, selectedDifficulty);
   }, [selectedType, selectedMuscle, selectedDifficulty]);
 
+  const capitalizeFirstLetter = (string) => {
+    if (!string) return '';
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   if (loading) return <div className="loading"></div>; 
   if (error) return <p>Error searching exercises: {error.message}</p>;
   
@@ -56,7 +61,7 @@ const Workouts = () => {
       <select value={selectedType} onChange={(e) => setSelectedType(e.target.value)}>
         <option value="">All</option>
         {exerciseTypes.map((type, index) => (
-          <option key={index} value={type}>{type}</option>
+          <option key={index} value={type}>{capitalizeFirstLetter(type)}</option>
         ))}
       </select>
 
@@ -64,7 +69,7 @@ const Workouts = () => {
       <select value={selectedMuscle} onChange={(e) => setSelectedMuscle(e.target.value)}>
         <option value="">All</option>
         {muscleGroups.map((muscle, index) => (
-          <option key={index} value={muscle}>{muscle}</option>
+          <option key={index} value={muscle}>{capitalizeFirstLetter(muscle)}</option>
         ))}
       </select>
 
@@ -72,7 +77,7 @@ const Workouts = () => {
       <select value={selectedDifficulty} onChange={(e) => setSelectedDifficulty(e.target.value)}>
         <option value="">All</option>
         {difficultyLevels.map((difficulty, index) => (
-          <option key={index} value={difficulty}>{difficulty}</option>
+          <option key={index} value={difficulty}>{capitalizeFirstLetter(difficulty)}</option>
         ))}
       </select>
 
@@ -80,11 +85,11 @@ const Workouts = () => {
       <ul>
         {filteredExercises.map((exercise, index) => (
           <li key={index} style={{ marginBottom: '20px', border: '1px solid #ccc', padding: '10px ', borderRadius: '5px' }}>
-            <h3>{exercise.name}</h3>
-            <p><strong>Type:</strong> {exercise.type}</p>
-            <p><strong>Muscle:</strong> {exercise.muscle}</p>
-            <p><strong>Equipment:</strong> {exercise.equipment}</p>
-            <p><strong>Difficulty:</strong> {exercise.difficulty}</p>
+            <h3>{capitalizeFirstLetter(exercise.name)}</h3>
+            <p><strong>Type:</strong> {capitalizeFirstLetter(exercise.type)}</p>
+            <p><strong>Muscle:</strong> {capitalizeFirstLetter(exercise.muscle)}</p>
+            <p><strong>Equipment:</strong> {capitalizeFirstLetter(exercise.equipment)}</p>
+            <p><strong>Difficulty:</strong> {capitalizeFirstLetter(exercise.difficulty)}</p>
             <p><strong>Instructions:</strong> {exercise.instructions}</p>
           </li>
         ))}
